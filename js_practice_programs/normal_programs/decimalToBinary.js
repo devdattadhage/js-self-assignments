@@ -1,0 +1,2 @@
+const decimalNumber = 5;
+

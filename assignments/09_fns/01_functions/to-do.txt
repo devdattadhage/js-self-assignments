@@ -1,0 +1,12 @@
+/*
+filter
+map 
+reduce (also search for max and min problem)
+variadic arguments
+function reference
+destructuring
+spread Operator
+in Array.from => ex. charCodeAt(), fromCharCode, 
+instance methods
+
+*/
