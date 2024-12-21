@@ -1,18 +1,54 @@
 // squares of [1, 2, 3] => [1, 4, 9]
-const squaresOf = function (numbers) { };
+const square = function (element) {
+  return element * element;
+}
+
+const squaresOf = function (numbers) {
+  return numbers.map(square);
+};
+
+console.log(squaresOf([1, 2, 3, 4]));
 
 // lengths of ["apple", "banana", "kiwi"] => [5, 6, 4]
-const lengthsOf = function (strings) { };
+const getLength = function (text) {
+  return text.length;
+}
+
+const lengthsOf = function (strings) {
+  return strings.map(getLength);
+};
+
+console.log(lengthsOf(["apple", "banana", "kiwi"]));
 
 // uppercase of ["hello", "world"] => ["HELLO", "WORLD"]
-const uppercaseOf = function (strings) { };
+const uppercase = function (text) {
+  return text.toUpperCase();
+}
+
+const uppercaseOf = function (strings) {
+  return strings.map(uppercase);
+};
+
+console.log(uppercaseOf(["hello", "world", "SORROW"]));
 
 // first characters of ["apple", "banana", "kiwi"] => ["a", "b", "k"]
-const firstCharactersOf = function (strings) { };
+const extractCharacter = function (index) {
+  return function (text) {
+    return text[index];
+  }
+}
+
+const firstCharactersOf = function (strings) {
+  return strings.map(extractCharacter(0));
+};
+
+console.log(firstCharactersOf(["apple", "banana", "kiwi"]));
 
 // truth values of [0, 1, 2, 3] => [false, true, true, true]
 // Assume non-zero numbers are true, and zero is false
-const truthValuesOf = function (numbers) { };
+const truthValuesOf = function (numbers) { 
+  
+};
 
 // reverse strings of ["hello", "world"] => ["olleh", "dlrow"]
 const reversedStringsOf = function (strings) { };
