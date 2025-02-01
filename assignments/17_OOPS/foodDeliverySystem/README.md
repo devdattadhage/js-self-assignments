@@ -29,7 +29,7 @@ Each step must:
 
 ---
 
-### **Example Output (Time Elapsed Included)** 
+### **Example Output (Time Elapsed Included)**
 
 [0.00s] Order received: { orderId: 123 }
 [3.01s] Preparing food...
