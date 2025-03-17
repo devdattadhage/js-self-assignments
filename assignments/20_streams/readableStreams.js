@@ -1,8 +1,8 @@
-const file = await Deno.open("demo.js", { read: true });
+const file = await Deno.open("readableStreams.js", { read: true });
 const readableStream = file.readable;
 
 console.log(readableStream.locked);
-console.log(await readableStream.getReader().read());
+// console.log(await readableStream.getReader().read());
 console.log(readableStream.locked);
 
 // Read the stream chunk by chunk

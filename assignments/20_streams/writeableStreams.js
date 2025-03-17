@@ -1,4 +1,4 @@
-// const file = await Deno.create("output.txt"); // Creates a writable file
+// const file = await Deno.create("./output/output.txt"); // Creates a writable file
 // const writableStream = file.writable;
 // console.log(writableStream.locked);
 // const writer = writableStream.getWriter();
@@ -13,9 +13,10 @@
 
 // console.log(writableStream.locked);
 
-const file = await Deno.create("output.txt", { write: true, append: true }); // Creates a writable file
+const file = await Deno.create("./output/output.txt", {
+  write: true,
+  append: true,
+});
 const writer = file.writable.getWriter();
 await writer.write(new TextEncoder().encode("Hello, Streams!"));
 await writer.write(new TextEncoder().encode("\nHello, Beams!!"));
-
-const writer1 = file.writable.getWriter();

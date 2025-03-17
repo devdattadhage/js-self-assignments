@@ -10,11 +10,11 @@ const transformStream = new TransformStream({
 });
 
 // Create a readable stream from a file
-const inputFile = await Deno.open("output.txt", { read: true });
+const inputFile = await Deno.open("./output/output.txt", { read: true });
 const readableStream = inputFile.readable;
 
 // Create a writable stream for output
-const outputFile = await Deno.create("output1.txt");
+const outputFile = await Deno.create("./output/output1.txt");
 const writableStream = outputFile.writable;
 
 // Pipe through the transform stream
