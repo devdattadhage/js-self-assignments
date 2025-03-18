@@ -1,0 +1,16 @@
+{
+  "scriptId": "323",
+  "url": "file:///Users/devdattadhage/workspace/js/js-self-assignments/assignments/22_testing/src/demo2.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 34, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "someFn",
+      "ranges": [{ "startOffset": 22, "endOffset": 32, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

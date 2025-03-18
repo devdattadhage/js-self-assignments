@@ -1,0 +1,16 @@
+{
+  "scriptId": "319",
+  "url": "file:///Users/devdattadhage/workspace/js/js-self-assignments/assignments/22_testing/src/deno3.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 28, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "otherFn",
+      "ranges": [{ "startOffset": 16, "endOffset": 26, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}
