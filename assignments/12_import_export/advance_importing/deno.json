@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "chalk": "deno run -A chalk.js",
+    "task1": {
+      "command": "tree",
+      "description": "Display file structure"
+    },
+    "task2": {
+      "command": "ls"
+    },
+    "home": {
+      "command": "cd /Users/devdattadhage/workspace && ls",
+      "description": "list home directory"
+    }
+  },
+  "imports": {
+    "chalk": "jsr:@nothing628/chalk@^1.0.1"
+  }
+}
