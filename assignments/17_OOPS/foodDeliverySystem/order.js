@@ -13,17 +13,14 @@ const task = (begin, final, delay, next) => (taskDetails) => {
 };
 
 const deliveringOrder = task(
-  ({ startTime, orderDetails }) => {
+  ({ startTime, packingDetails }) => {
     console.log(timeTaken(startTime), "Delivering order...");
-    return { startTime, orderDetails };
+    return { startTime, packingDetails };
   },
-  ({ startTime, orderDetails }) => {
-    const deliveryDetails = "Delivered by John at 7:30 PM";
-    console.log(timeTaken(startTime), "Order delivered:", {
-      ...orderDetails,
-      deliveryDetails,
-    });
-    return { startTime, orderDetails };
+  ({ startTime, packingDetails: { ...deliveringDetails } }) => {
+    deliveringDetails.deliveryDetails = "Delivered by John at 7:30 PM";
+    console.log(timeTaken(startTime), "Order delivered:", deliveringDetails);
+    return { startTime, deliveringDetails };
   },
   5000,
   () => {}
@@ -34,13 +31,10 @@ const packingOrder = task(
     console.log(timeTaken(startTime), "Packing order...");
     return { startTime, orderDetails };
   },
-  ({ startTime, orderDetails }) => {
-    const packageDetails = "Packed in eco-friendly box";
-    console.log(timeTaken(startTime), "Order packed:", {
-      ...orderDetails,
-      packageDetails,
-    });
-    return { startTime, orderDetails };
+  ({ startTime, orderDetails: { ...packingDetails } }) => {
+    packingDetails.packageDetails = "Packed in eco-friendly box";
+    console.log(timeTaken(startTime), "Order packed:", packingDetails);
+    return { startTime, packingDetails };
   },
   2000,
   deliveringOrder
