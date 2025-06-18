@@ -5,6 +5,7 @@ while (true) {
   if (msg === "exit") break;
   const encoder = new TextEncoder();
   const decoder = new TextDecoder();
+  console.log(msg);
   await conn.write(encoder.encode(msg));
 
   const buffer = new Uint8Array(1024);
